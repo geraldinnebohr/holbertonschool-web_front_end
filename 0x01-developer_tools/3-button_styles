@@ -27,5 +27,3 @@ text-decoration: none;
 background-color: transparent;
 *, *::before, *::after
 box-sizing: border-box;
-a:-webkit-any-link
-cursor: pointer;
