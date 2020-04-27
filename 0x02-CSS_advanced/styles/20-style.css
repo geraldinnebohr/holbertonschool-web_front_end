@@ -56,10 +56,10 @@ ul.row {
   list-style: none;
 }
 
-.row:after {
-  content: none;
+.row::after {
+  content: "";
   display: table;
-  float: none;
+  clear: both;
 }
 
 .col-1-3 {
