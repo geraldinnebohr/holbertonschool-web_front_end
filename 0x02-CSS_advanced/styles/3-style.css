@@ -1,5 +1,6 @@
+/* Target the root element */
 html {
-  scroll-behavior: smooth; /* o auto */
+  scroll-behavior: smooth;
 }
 
 body {
