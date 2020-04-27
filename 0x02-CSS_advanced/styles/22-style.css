@@ -98,7 +98,7 @@ ul.row {
   padding: var(--section-header-padding);
 }
 
-html[data-section-theme='dark'] {
+html[data-theme='dark'] {
   --text-color: var(--color-white);
   --section-title-color: var(--color-white);
   background-color: var(--color-black);
