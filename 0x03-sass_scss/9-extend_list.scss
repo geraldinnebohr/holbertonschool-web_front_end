@@ -1,18 +1,15 @@
 /* extended styles */
-%share-font-size {
+
+.info {
   font-size: 12px;
 }
 
-.info {
-  @extend %share-font-size;
-}
-
 .success {
-  @extend %share-font-size;
+  @extend .info;
   color: #00FF00;
 }
 
 .warning {
-  @extend %share-font-size;
+  @extend .info;
   color: #FF0000;
 }
