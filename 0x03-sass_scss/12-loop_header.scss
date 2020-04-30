@@ -1,5 +1,5 @@
 @for $value from 1 through 5 {
-  .h#{$value} {
+  h#{$value} {
     font-size: $value + px;
   }
 }
