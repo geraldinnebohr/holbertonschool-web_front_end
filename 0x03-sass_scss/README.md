@@ -1,1 +1,1 @@
-Sass project
+Sass and Scss project
