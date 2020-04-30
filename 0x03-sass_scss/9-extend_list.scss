@@ -1,0 +1,17 @@
+%share-font-size {
+  font-size: 12px;
+}
+
+.info {
+  @extend %share-font-size;
+}
+
+.success {
+  @extend %share-font-size;
+  color: #00FF00;
+}
+
+.warning {
+  @extend %share-font-size;
+  color: #FF0000;
+}
