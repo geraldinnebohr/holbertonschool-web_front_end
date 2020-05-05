@@ -563,7 +563,7 @@
     width: 100%;
   }
 
-  post-aside {
+  .post-aside {
     order: -1;
     min-width: 20%;
   }
