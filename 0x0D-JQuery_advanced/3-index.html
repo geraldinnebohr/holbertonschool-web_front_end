@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8" />
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous">
+    </script>
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script type="application/javascript">
+      function createFamilyTree() {
+        $("body").last().append("<table></table>")
+                        .append("<tr></tr>")
+                        .append("<tr></tr>")
+                        .append("<tr></tr>")
+                        .append("<tr></tr>")
+                        .find("tr")
+                        .eq(0)
+                        .append("<th></th>").find("th").first().text("Firstname").end().end()
+                        .append("<th></th>").find("th").last().text("Lastname").end().end()
+                        .end()
+                        .eq(1)
+                        .append("<td></td>").find("td").first().text("Guillaume").end().end()
+                        .append("<td></td>").find("td").last().text("Salva").end().end()
+                        .end()
+                        .eq(2)
+                        .append("<td></td>").find("td").first().text("Paulette").end().end()
+                        .append("<td></td>").find("td").last().text("Salva").end().end()
+                        .end()
+                        .eq(3)
+                        .append("<td></td>").find("td").first().text("Antoine").end().end()
+                        .append("<td></td>").find("td").last().text("Salva");
+      }
+      createFamilyTree();
+    </script>
+  </body>
+
+</html>
