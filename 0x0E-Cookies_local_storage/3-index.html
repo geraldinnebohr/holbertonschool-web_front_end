@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h2>Login to the website</h2>
+    <input type="text" id="firstname">
+    <input type="email" id="email">
+    <button id="login" onclick="setCookies()">Log me in</button>
+  </div>
+  <h1>Cookies</h1>
+  <button onclick="showCookies()">Show the cookies</button>
+  <script>
+    function setCookies() {
+      document.cookie = `firstname=${document.getElementById("firstname").value}; expires=Thu, 09 Jul 2020 12:00:00 UTC`;
+      document.cookie = `email=${document.getElementById("email").value}; expires=Thu, 09 Jul 2020 12:00:00 UTC`;
+    }
+    function showCookies() {
+      const paragraph = document.createElement("p");
+      paragraph.innerHTML = `Cookies: ${document.cookie.toUpperCase()}`;
+      document.querySelector("body").append(paragraph);
+    }
+    function getCookie(name) {
+      const cookieName = `${name}=`;
+      const decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    function showForm() {
+      document.querySelector("div").style.display = "block";
+    }
+    function hideForm() {
+      document.querySelector("div").style.display = "none";
+    }
+    function deleteCookiesAndShowForm() {
+      document.cookie = "firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+      document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+      showForm();
+    }
+    function showWelcomeMessageOrForm() {
+      document.getElementById("login").addEventListener("click", () => {
+        const welcome = document.createElement("h1");
+        const link = document.createElement("a");
+        link.setAttribute("href", deleteCookiesAndShowForm());
+        welcome.innerHTML = `Welcome ${getCookie(firstname)} ${link}`;
+      document.querySelector("body").append(welcome);
+      })
+    }
+  </script>
+</body>
+</html>
